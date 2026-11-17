@@ -27,12 +27,25 @@ Build Butler replaces that routine:
 
 ## Screenshots
 
-<!-- Replace with real screenshots, e.g. docs/screenshots/status-board.png -->
-_Status board: screenshot coming soon_
+**Status board:** every test PC, its current build and how the latest install went.
 
-_Builds and the Deploy checklist: screenshot coming soon_
+![Status board](docs/screenshots/status-board.png)
 
-_Machines and the one-time token: screenshot coming soon_
+**After the agent runs:** QA-PC-01 has installed Driftwood 0.4.3 by itself, and the log is the one the agent reported back.
+
+![Agent result with its install log](docs/screenshots/agent-success.png)
+
+**A failed install:** the log shows which step broke and Windows' own error.
+
+![Failed install log](docs/screenshots/install-log.png)
+
+**Deploy:** pick which PCs get a build. PCs already on it are flagged.
+
+![Deploy checklist](docs/screenshots/deploy-checklist.png)
+
+**Adding a machine:** its agent token is shown once, with a copy button.
+
+![New machine with its one-time token](docs/screenshots/machine-token.png)
 
 ## How it works
 
