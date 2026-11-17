@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+# Holds a real agent token on each PC, so never commit it
+agent/config.json
+agent/agent.log
+.DS_Store

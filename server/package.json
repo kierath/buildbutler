@@ -1,0 +1,16 @@
+{
+  "name": "build-butler-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env index.js",
+    "start": "node --env-file=.env index.js",
+    "db:reset": "psql -d build_butler -q -f ../database/schema.sql -f ../database/seed.sql",
+    "check": "npm run db:reset && node check-api.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  }
+}
