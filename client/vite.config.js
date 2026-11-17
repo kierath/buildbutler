@@ -5,6 +5,8 @@ import react from '@vitejs/plugin-react';
 // The browser only ever talks to Vite (port 5173), so no CORS setup is needed.
 export default defineConfig({
   plugins: [react()],
+  // Relative file paths, so the built site works from any folder on a web host.
+  base: './',
   server: {
     port: 5173,
     proxy: {

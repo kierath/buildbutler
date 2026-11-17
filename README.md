@@ -4,6 +4,8 @@ A small internal tool that tracks game builds, deploys them to test PCs automati
 
 > **Demo project.** All studios, games and machines in the sample data are made up.
 
+**Live demo:** _link coming soon_. The live demo is the same React front end built with sample data inside it, so it runs as plain files with no server. You can register builds, deploy and edit machines; changes stay in your browser and reset when you reload. The full app runs on Node.js and PostgreSQL: see [Run it locally](#run-it-locally).
+
 ## The problem
 
 At my last studio, the client sent a new game build every week. During the Thursday stand-up I installed each one by hand on colleagues' PCs with a `.bat` script, typing the admin password again and again. Nobody could see which machine had which build, so "is your PC on the new one?" was a regular question.
@@ -65,7 +67,7 @@ Runtime dependencies: `express`, `pg`, `react`, `react-dom`. Dev-only: `vite`, `
 build-butler/
 ├── database/     schema.sql (4 tables) and seed.sql (demo data)
 ├── server/       Express API, routes/, check-api.js smoke test, public/builds/ dummy zips
-├── client/       React app: pages/ (4 pages) and components/ (badge, modal, forms)
+├── client/       React app: pages/ (4 pages), components/ (badge, modal, forms), demo/ (sample data for the static demo)
 └── agent/        agent.ps1, install-agent.ps1, config.example.json
 ```
 
@@ -116,6 +118,15 @@ npm run check
 ```
 
 This resets the demo data and runs 13 checks, printing ✅ or ❌ for each. Run `npm run db:reset` any time to go back to clean demo data.
+
+**5. Build the static demo** (optional, for hosting on a plain web host)
+
+```bash
+cd client
+npm run build:demo
+```
+
+This builds the website into `client/dist` with sample data inside it, using `client/src/demo/` instead of the API. Upload the contents of `dist` to any static host. No server or database is needed.
 
 ## Install the agent on a Windows PC
 

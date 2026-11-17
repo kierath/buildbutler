@@ -34,8 +34,7 @@ export default function App() {
               {p.label}
             </button>
           ))}
-        </nav>
-      </header>
+        </nav>      </header>
       <main className="page">
         <Component />
       </main>
