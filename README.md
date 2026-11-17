@@ -4,7 +4,7 @@ A small internal tool that tracks game builds, deploys them to test PCs automati
 
 > **Demo project.** All studios, games and machines in the sample data are made up.
 
-**Live demo:** (https://kierathdhugga.com/buildbutler/). The live demo is the same React front end built with sample data inside it, so it runs as plain files with no server. You can register builds, deploy and edit machines; changes stay in your browser and reset when you reload. The full app runs on Node.js and PostgreSQL: see [Run it locally](#run-it-locally).
+**Live demo:** [kierathdhugga.com/buildbutler](https://kierathdhugga.com/buildbutler/). The live demo is the same React front end built with sample data inside it, so it runs as plain files with no server. You can register builds, deploy and edit machines; changes stay in your browser and reset when you reload. The full app runs on Node.js and PostgreSQL: see [Run it locally](#run-it-locally).
 
 ## The problem
 
